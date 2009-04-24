@@ -1,0 +1,7 @@
+log/*
+tmp/*
+db/*.sqlite3
+.DS_Store
+public/attachments/*
+public/stylesheets/base.css
+config/deploy_private.rb
