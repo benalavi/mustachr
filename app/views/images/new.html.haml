@@ -1,0 +1,6 @@
+%ul#main_menu
+  %li= link_to 'Latest', root_path(:sort => 'latest'), :class => 'first'
+  %li= link_to 'Most Comments', root_path(:sort => 'comments')
+  %li= link_to 'Highest Rated', root_path(:sort => 'ratings'), :class => 'last'
+- for image in @images
+  = link_to get_image_tag(image, '100x100'), image

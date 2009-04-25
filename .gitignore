@@ -5,3 +5,5 @@ db/*.sqlite3
 public/attachments/*
 public/stylesheets/base.css
 config/deploy_private.rb
+config/settings.yml
+vendor/*

@@ -1,0 +1,4 @@
+development:
+  s3_access_key_id: <YOUR S3 ACCESS KEY ID>
+  s3_secret_access_key: <YOUR S3 SECRET ACCESS KEY>
+  s3_bucket: <YOUR S3 BUCKET>

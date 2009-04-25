@@ -1,0 +1,1 @@
+require 'classy_forms'

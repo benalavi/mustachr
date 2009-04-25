@@ -1,0 +1,150 @@
+// http://wonderfullyflawed.com/2008/05/21/clearfix-as-mixin/
+=clearfix
+  *display: inline-block
+  &:after
+    content: " "
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+body
+  :width 660px
+  :margin 0px auto
+  :background-color #111
+  :color #666
+  
+a
+  :color #666
+  &:hover
+    :color #fff
+  img
+    :border 1px solid #000
+    &:hover
+      :border 1px solid #fff
+      
+#content
+  :width 660px
+  :padding 10px
+  :background-color #1a1a1a
+  
+#header
+  +clearfix
+  :margin-top 10px
+  :margin-bottom 20px
+  
+h1#title
+  :height 60px
+  :float left
+  :width 230px
+  :margin 0px
+  img
+    :border 0px
+
+#mustache_count
+  :font-style italic
+  :float right
+  :margin-right 15px
+  
+ul#main_menu
+  :padding 0px
+  :margin 10px 0px
+  :list-style-type none
+  :height 30px
+  li
+    :display block
+    :float left
+    :font-size 11px
+  a
+    :display block
+    :float left
+    :color #ccc
+    :height 24px
+    :text-decoration none
+    :padding 6px 10px 0px 10px
+    :background-color #111
+    &:hover
+      :background-color #000
+      :color #fff
+    &.first
+      :background #111 url("/images/ends.png") 0px -60px no-repeat
+      :padding-left 20px
+      &:hover
+        :background #000 url("/images/ends.png") 0px -90px no-repeat
+    &.last
+      :background #111 url("/images/right_end.png") top right no-repeat
+      :padding-right 20px
+      &:hover
+        :background #000 url("/images/right_end.png") 0px -30px no-repeat
+  
+// mustached_images ===========================================================
+// show -----------------------------------------------------------------------
+body.mustached_images.show
+  img.mustached
+    :display block
+    :border 1px solid #000
+    :margin 0px auto
+    
+ul.gallery
+  :padding 0px
+  :margin 10px 0px
+  :text-align center
+  .current
+    img
+      :border 1px solid #000
+  li
+    :display inline
+
+// love footer ================================================================  
+#footer
+  :text-align right
+  :padding 10px
+  :font-size 10px
+  .separator
+    :padding 5px
+  a
+    :color #666
+    :text-decoration none
+  #love
+    :line-height 10px
+    :color #fff
+
+// uploader ===================================================================
+form#new_original_image
+  +clearfix
+  :margin 20px 0px
+  input
+    :display block
+    :float left
+  .submit, .button
+    :margin-top 4px
+  .submit
+    :margin-left 10px
+
+input.browse
+  :display none
+// this has a set width and height so the progress can match it
+input.upload.active_upload
+  :width 200px
+  :padding 4px
+  :font-family "Times New Roman", "serif"
+  :font-size 16px
+  :margin-right 10px
+  :background-color #fff
+  :border 1px solid #000
+.upload_status
+  :width 208px
+  :height 28px
+  :background-color #fff
+  :border 1px solid #000
+  :float left
+  :margin-right 10px
+  :display none
+  :overflow hidden
+.upload_progress
+  :background-color #efe
+  :width 30px
+  :height 26px
+.upload_text
+  :display block
+  :padding 4px
