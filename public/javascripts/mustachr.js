@@ -4,17 +4,18 @@ $(function() {
 });
 
 jQuery.fn.love = function() {
+	love = false;
 	this.hover(
-		function(){ loved = true;pulsate(); },
-		function(){ loved = false;$(this).css({ 'font-size': '10px' }); }
+		function(){ love = true;$(this).pulsate('12px', '10px'); },
+		function(){ love = false;$(this).css({ 'font-size': '10px' }); }
 	);
 }
 
-function pulsate() {
-	if(loved) {
-		$('#love').css({ 'font-size': '12px' });
-		setTimeout("$('#love').css({ 'font-size': '10px' })", 500);
-		setTimeout('pulsate()', 800);
+jQuery.fn.pulsate = function(big, small) {
+	this.css({ 'font-size': small });
+	if(love) {
+		setTimeout("$('#" + this.attr('id') + "').css({ 'font-size': '" + big + "'  })", 500);
+		setTimeout("$('#" + this.attr('id') + "').pulsate('" + big + "', '" + small + "')", 800);
 	}
 }
 

@@ -23,6 +23,7 @@ namespace :deploy do
   task :symlink_configs, :roles => :app, :except => { :no_symlink => true } do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/settings.yml #{release_path}/config/settings.yml"
+    run "ln -nfs #{shared_path}/db/production.sqlite3 #{release_path}/db/production.sqlite3"
   end
 end
 
