@@ -2,18 +2,19 @@
 %html
   %head
     %title= 'Mustachr'
-    = stylesheet_link_tag 'reset', 'typography', 'base'
-    = javascript_include_tag 'jquery-1.2.6.min.js', 'jquery.form-2.03.js', 'swfupload', 'upload', 'base'
+    = stylesheet_link_tag 'blueprint/reset', 'blueprint/typography', 'ie', 'mustachr'
+    = javascript_include_tag 'jquery-1.3.2.min.js', 'mustachr'
   %body{:class => "#{controller.controller_name} #{controller.action_name}"}
     #content
       #header
         %h1#title= link_to image_tag('mustachr.png'), root_path
         %p#mustache_count= "Over #{Image.count(:all)-1} mustached!"
       - form_for Image.new, :html => { :multipart => true } do |f|
-        = f.file_field :file, :class => 'upload'
-        = f.button 'Browse', :class => 'browse'
+        %p
+          %label{:for => 'image[file]'} Upload:
+          = f.file_field :file, :class => 'upload'
         = f.submit 'Mustachify!'
-      = yield
+      #main= yield
     #footer
       = link_to 'bugs? feature requests?', 'http://citrusbyte.lighthouseapp.com/projects/17860-mustachr'
       %span.separator= "|"

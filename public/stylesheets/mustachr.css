@@ -1,0 +1,125 @@
+body {
+  width: 660px;
+  margin: 0px auto;
+  background-color: #111;
+  color: #666; }
+
+a {
+  color: #666; }
+  a:hover {
+    color: #fff; }
+  a img {
+    border: 1px solid #000; }
+    a img:hover {
+      border: 1px solid #fff; }
+
+#content {
+  width: 660px;
+  background-color: #1a1a1a; }
+
+#header {
+  *display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 10px 0px 10px; }
+  #header:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+#main {
+  padding: 0px 10px 10px 10px; }
+
+h1#title {
+  height: 60px;
+  float: left;
+  width: 230px;
+  margin: 0px; }
+  h1#title img {
+    border: 0px; }
+
+#mustache_count {
+  font-style: italic;
+  float: right;
+  margin-right: 15px; }
+
+ul#main_menu {
+  padding: 0px;
+  margin: 10px 0px;
+  list-style-type: none;
+  height: 30px; }
+  ul#main_menu li {
+    display: block;
+    float: left;
+    font-size: 11px; }
+  ul#main_menu a {
+    display: block;
+    float: left;
+    color: #ccc;
+    height: 24px;
+    text-decoration: none;
+    padding: 6px 10px 0px 10px;
+    background-color: #111; }
+    ul#main_menu a:hover {
+      background-color: #000;
+      color: #fff; }
+    ul#main_menu a.first {
+      background: #111 url("/images/ends.png") 0px -60px no-repeat;
+      padding-left: 20px; }
+      ul#main_menu a.first:hover {
+        background: #000 url("/images/ends.png") 0px -90px no-repeat; }
+    ul#main_menu a.last {
+      background: #111 url("/images/right_end.png") top right no-repeat;
+      padding-right: 20px; }
+      ul#main_menu a.last:hover {
+        background: #000 url("/images/right_end.png") 0px -30px no-repeat; }
+
+body.images.show img.mustached {
+  display: block;
+  border: 1px solid #000;
+  margin: 0px auto; }
+
+ul.gallery {
+  padding: 0px;
+  margin: 10px 0px;
+  text-align: center; }
+  ul.gallery .current img {
+    border: 1px solid #000; }
+  ul.gallery li {
+    display: inline; }
+
+#footer {
+  text-align: right;
+  padding: 10px;
+  font-size: 10px; }
+  #footer .separator {
+    padding: 5px; }
+  #footer a {
+    color: #666;
+    text-decoration: none; }
+  #footer #love {
+    line-height: 10px;
+    color: #fff; }
+
+form#new_image {
+  *display: inline-block;
+  text-align: left;
+  margin: 20px 0px;
+  background-color: #212121;
+  padding: 10px; }
+  form#new_image:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  form#new_image label {
+    padding-right: 5px; }
+  form#new_image p {
+    float: left;
+    margin: 0px; }
+  form#new_image .submit {
+    float: right;
+    margin-top: 2px; }

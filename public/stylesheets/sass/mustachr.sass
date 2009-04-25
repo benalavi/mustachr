@@ -25,14 +25,17 @@ a
       
 #content
   :width 660px
-  :padding 10px
   :background-color #1a1a1a
   
 #header
   +clearfix
   :margin-top 10px
   :margin-bottom 20px
-  
+  :padding 10px 10px 0px 10px
+
+#main
+  :padding 0px 10px 10px 10px
+
 h1#title
   :height 60px
   :float left
@@ -79,7 +82,7 @@ ul#main_menu
   
 // mustached_images ===========================================================
 // show -----------------------------------------------------------------------
-body.mustached_images.show
+body.images.show
   img.mustached
     :display block
     :border 1px solid #000
@@ -110,41 +113,17 @@ ul.gallery
     :color #fff
 
 // uploader ===================================================================
-form#new_original_image
+form#new_image
   +clearfix
+  :text-align left
   :margin 20px 0px
-  input
-    :display block
+  :background-color #212121
+  :padding 10px
+  label
+    :padding-right 5px
+  p
     :float left
-  .submit, .button
-    :margin-top 4px
+    :margin 0px
   .submit
-    :margin-left 10px
-
-input.browse
-  :display none
-// this has a set width and height so the progress can match it
-input.upload.active_upload
-  :width 200px
-  :padding 4px
-  :font-family "Times New Roman", "serif"
-  :font-size 16px
-  :margin-right 10px
-  :background-color #fff
-  :border 1px solid #000
-.upload_status
-  :width 208px
-  :height 28px
-  :background-color #fff
-  :border 1px solid #000
-  :float left
-  :margin-right 10px
-  :display none
-  :overflow hidden
-.upload_progress
-  :background-color #efe
-  :width 30px
-  :height 26px
-.upload_text
-  :display block
-  :padding 4px
+    :float right
+    :margin-top 2px
