@@ -6,3 +6,4 @@ public/attachments/*
 public/stylesheets/base.css
 config/deploy_private.rb
 config/settings.yml
+config/database.yml
