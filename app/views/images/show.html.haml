@@ -1,7 +1,7 @@
 = image_tag @image.path(:big), :class => 'mustached'
 %ul.gallery
-  - for before in @before
+  - for before in @gallery.before
     %li.previous= link_to image_tag(before.path(:tiny)), before
   %li.current= image_tag @image.path(:selected)
-  - for after in @after
+  - for after in @gallery.after
     %li.next= link_to image_tag(after.path(:tiny)), after

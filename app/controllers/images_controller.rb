@@ -1,6 +1,4 @@
 class ImagesController < ApplicationController
-  GALLERY_WIDTH = 3
-
   skip_before_filter :verify_authenticity_token, :only => :create
 
   def index
@@ -8,11 +6,8 @@ class ImagesController < ApplicationController
   end
   
   def show
-    @image   = Image.find params[:id]
-    @before  = Image.before(@image.created_at).find(:all, :limit => GALLERY_WIDTH).reverse
-    @before += Image.find(:all, :limit => (GALLERY_WIDTH - @before.size), :order => 'created_at DESC') if @before.size < GALLERY_WIDTH
-    @after   = Image.after(@image.created_at).find(:all, :limit => GALLERY_WIDTH)
-    @after  += Image.find(:all, :limit => (GALLERY_WIDTH - @after.size), :order => 'created_at ASC') if @after.size < GALLERY_WIDTH
+    @image = Image.find params[:id]
+    @gallery = ImageGallery.new @image
   end
 
   def new
