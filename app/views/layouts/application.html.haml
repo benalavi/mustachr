@@ -8,7 +8,9 @@
     #content
       #header
         %h1#title= link_to image_tag('mustachr.png'), root_path
-        %p#mustache_count= "Over #{Image.count(:all)-1} mustached!"
+        %p
+          %span#mustache_count= "Over #{Image.count(:all)-1} mustached!"
+          = link_to 'About', 'about', :id => 'about_link'
       - form_for Image.new, :html => { :multipart => true } do |f|
         %p
           %label{:for => 'image[file]'} Upload:

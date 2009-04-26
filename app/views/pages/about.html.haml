@@ -1,0 +1,18 @@
+%h2 Mustachr: <em>the</em> name in automated mustache placement!
+%p
+  Mustachr is an open-source Rails application built by
+  = link_to 'Citrusbyte', 'http://www.citrusbyte.com/'
+  to simultaneously provide the world with a solution for their automatic mustache placement needs, and to demonstrate the use of the Rails file handling plugin
+  = link_to 'Milton', 'http://labs.citrusbyte.com/projects/milton'
+  \.
+%p For more information, have a look at:
+%dl
+  %dt= "Mustachr (#{link_to_url('http://github.com/benalavi/mustachr')})"
+  %dd The code that runs this site.
+%dl
+  %dt= "Mustacher (#{link_to_url('http://github.com/benalavi/mustacher')})"
+  %dd Mustacher is a processor extension for Milton that provides automatic mustache placement onto images.
+%dl
+  %dt= "Milton (#{link_to_url('http://github.com/citrusbyte/milton')})"
+  %dd Milton is a file handling plugin that handles the uploads on this site, processing the thumbnails, and storing them to Amazon S3.
+

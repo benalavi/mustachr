@@ -5,13 +5,16 @@ body {
   color: #666; }
 
 a {
-  color: #666; }
+  color: #858DF3; }
   a:hover {
     color: #fff; }
   a img {
     border: 1px solid #000; }
     a img:hover {
       border: 1px solid #fff; }
+
+h2 {
+  color: #666; }
 
 #content {
   width: 660px;
@@ -40,41 +43,18 @@ h1#title {
   h1#title img {
     border: 0px; }
 
+#header p {
+  float: right;
+  margin: 0px;
+  text-align: right;
+  margin-right: 10px; }
+
 #mustache_count {
   font-style: italic;
-  float: right;
-  margin-right: 15px; }
+  display: block; }
 
-ul#main_menu {
-  padding: 0px;
-  margin: 10px 0px;
-  list-style-type: none;
-  height: 30px; }
-  ul#main_menu li {
-    display: block;
-    float: left;
-    font-size: 11px; }
-  ul#main_menu a {
-    display: block;
-    float: left;
-    color: #ccc;
-    height: 24px;
-    text-decoration: none;
-    padding: 6px 10px 0px 10px;
-    background-color: #111; }
-    ul#main_menu a:hover {
-      background-color: #000;
-      color: #fff; }
-    ul#main_menu a.first {
-      background: #111 url("/images/ends.png") 0px -60px no-repeat;
-      padding-left: 20px; }
-      ul#main_menu a.first:hover {
-        background: #000 url("/images/ends.png") 0px -90px no-repeat; }
-    ul#main_menu a.last {
-      background: #111 url("/images/right_end.png") top right no-repeat;
-      padding-right: 20px; }
-      ul#main_menu a.last:hover {
-        background: #000 url("/images/right_end.png") 0px -30px no-repeat; }
+.pages.show #main {
+  text-align: left; }
 
 body.images.show img.mustached {
   display: block;

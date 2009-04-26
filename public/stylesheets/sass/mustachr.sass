@@ -15,14 +15,17 @@ body
   :color #666
   
 a
-  :color #666
+  :color #858DF3
   &:hover
     :color #fff
   img
     :border 1px solid #000
     &:hover
       :border 1px solid #fff
-      
+
+h2
+  :color #666
+
 #content
   :width 660px
   :background-color #1a1a1a
@@ -44,41 +47,18 @@ h1#title
   img
     :border 0px
 
+#header p
+  :float right
+  :margin 0px
+  :text-align right
+  :margin-right 10px
+
 #mustache_count
   :font-style italic
-  :float right
-  :margin-right 15px
-  
-ul#main_menu
-  :padding 0px
-  :margin 10px 0px
-  :list-style-type none
-  :height 30px
-  li
-    :display block
-    :float left
-    :font-size 11px
-  a
-    :display block
-    :float left
-    :color #ccc
-    :height 24px
-    :text-decoration none
-    :padding 6px 10px 0px 10px
-    :background-color #111
-    &:hover
-      :background-color #000
-      :color #fff
-    &.first
-      :background #111 url("/images/ends.png") 0px -60px no-repeat
-      :padding-left 20px
-      &:hover
-        :background #000 url("/images/ends.png") 0px -90px no-repeat
-    &.last
-      :background #111 url("/images/right_end.png") top right no-repeat
-      :padding-right 20px
-      &:hover
-        :background #000 url("/images/right_end.png") 0px -30px no-repeat
+  :display block
+
+.pages.show #main
+  :text-align left
   
 // mustached_images ===========================================================
 // show -----------------------------------------------------------------------
